@@ -6,12 +6,11 @@ let
         "query {
             group(fullPath: ""<NAME OF GROUP>"") {
                 name
-                epics(first: 100) {
+                workItems(types: [EPIC], first: 100) {
                     nodes {
                         id
                         iid
                         title
-                        description
                         state
                     }
                     pageInfo {
@@ -46,7 +45,7 @@ let
         else Response[data],
 
     Group = Data[group],
-    Epics = Table.FromRecords(Group[epics][nodes]),
+    Epics = Table.FromRecords(Group[workItems][nodes]),
     WithGroupName =
         Table.AddColumn(Epics, "group_name", each Group[name], type text)
 in
