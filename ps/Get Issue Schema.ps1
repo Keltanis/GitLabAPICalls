@@ -1,5 +1,5 @@
 $baseUrl   = "https://gitlab.com"
-$projectId = <PROJECT ID>
+$projectId = "<PROJECT ID>"
 $token     = "<GAT>"
 
 $uri = "$baseUrl/api/v4/projects/$projectId/issues?state=all&per_page=1"
