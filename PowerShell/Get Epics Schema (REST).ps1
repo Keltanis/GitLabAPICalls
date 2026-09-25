@@ -12,5 +12,5 @@ if ($epics.Count -eq 0) {
     Write-Host "No epics found in this group."
 }
 else {
-    $epics[0].PSObject.Properties.Name | Sort-Object
+    $epics[0].PSObject.Properties.Name | Sort-Object | Out-GridView
 }
