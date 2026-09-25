@@ -94,4 +94,4 @@ $simpleFields = $fields | Where-Object {
 }
 
 # Output just the field/property names
-$simpleFields.name | Out-GridView
+$simpleFields.name | Sort-Object | Out-GridView
