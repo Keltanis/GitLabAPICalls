@@ -12,5 +12,5 @@ if ($issues.Count -eq 0) {
     Write-Host "No issues found in this project."
 }
 else {
-    $issues[0].PSObject.Properties.Name | Sort-Object
+    $issues[0].PSObject.Properties.Name | Sort-Object | Out-GridView
 }
