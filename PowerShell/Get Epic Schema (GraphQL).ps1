@@ -101,4 +101,4 @@ $simpleFields |
             Expression = {
                 (Get-BaseType $_.type).name
             }
-        } | Out-GridView
+        } | Sort-Object | Out-GridView
